@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latar Belakang Charlie Puth - FindArts</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #008ddf;
+        --bg-dark: #121213;
+        --content-blue: #1a2a3a;
+        --text-gray: #b0b0b0;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* --- NAVBAR STYLE --- */
+      .navbar {
+        background: rgba(18, 18, 19, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: none !important;
+        box-shadow: none !important;
+        padding: 1rem 0;
+        transition: top 0.4s ease-in-out;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .navbar-hidden {
+        top: -100px !important;
+      }
+
+      .navbar-brand {
+        letter-spacing: 2px;
+      }
+
+      #clock {
+        font-weight: 600;
+        letter-spacing: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+      }
+
+      /* --- UPDATED HERO IMAGE SECTION --- */
+      #header {
+        width: 100%;
+        /* Menggunakan vh (viewport height) agar responsif di berbagai layar */
+        height: 60vh;
+        min-height: 400px;
+        background: linear-gradient(
+            to bottom,
+            rgba(18, 18, 19, 0) 60%,
+            var(--bg-dark) 100%
+          ),
+          url("../charlieputh/song_n_producer.png") no-repeat;
+
+        /* 'contain' memastikan gambar terlihat utuh, tapi mungkin menyisakan ruang kosong. 
+           'cover' lebih baik untuk banner, kita gunakan 'top center' agar kepala tidak terpotong. */
+        background-size: cover;
+        background-position: top center;
+        margin-top: 0;
+      }
+
+      /* --- CONTENT CARD --- */
+      .content-wrapper {
+        max-width: 900px;
+        /* margin-top dikurangi agar tidak menabrak wajah jika gambar pendek */
+        margin: -50px auto 80px auto;
+        background-color: var(--content-blue);
+        padding: 60px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: justify;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 25px;
+      }
+
+      mark {
+        background: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        padding: 0;
+      }
+
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-link {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+
+      .btn-link:hover {
+        color: var(--primary-color);
+      }
+
+      footer {
+        background: #0a0a0b;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        color: var(--text-gray);
+        font-size: 0.75rem;
+      }
+
+      /* Mobile Adjustment */
+      @media (max-width: 768px) {
+        #header {
+          height: 40vh;
+        }
+        .content-wrapper {
+          padding: 30px;
+          margin-top: -30px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          Find<span style="color: var(--primary-color)">Arts</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="UC_tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="UC_kontak.html">Kontak</a>
+            </li>
+          </ul>
+          <div id="clock" class="text-white ms-lg-3 mt-2 mt-lg-0">
+            🕒 00:00:00
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="header"></div>
+
+    <div class="container">
+      <div class="content-wrapper">
+        <h1>Latar Belakang Charles Otto Puth Jr.</h1>
+
+        <p>
+          Charlie Puth Jr. lahir pada <mark>2 Desember 1991</mark> di Rumson,
+          New Jersey. Bakat musiknya diasah sejak dini oleh ibunya,
+          <b>Debra Puth</b>, yang mulai mengajarinya piano pada usia 4 tahun. Ia
+          tumbuh besar bersama ayahnya, <b>Charles Puth</b>, serta kedua adik
+          kembarnya, Stephen dan Mikaela. Salah satu ciri khas fisiknya adalah
+          bekas luka di alis kanan, kenang-kenangan dari gigitan anjing saat ia
+          masih balita.
+        </p>
+
+        <p>
+          Perjalanan pendidikannya tidak selalu mulus; ia sempat mengalami
+          perundungan di sekolah. Namun, dedikasinya terhadap musik membawanya
+          ke Manhattan School of Music dan akhirnya lulus dari
+          <b>Berklee College of Music</b> pada tahun 2013 dengan beasiswa penuh
+          di jurusan Music Production and Engineering.
+        </p>
+
+        <p>
+          Kariernya meledak melalui kanal YouTube "Charlie Vlogs". Dikenal
+          karena kemampuan <i>perfect pitch</i>-nya yang luar biasa, Charlie
+          kini telah bertransformasi dari seorang YouTuber menjadi salah satu
+          produser dan penyanyi pop paling berpengaruh. Di luar karier, ia baru
+          saja memulai babak baru hidupnya setelah menikah dengan
+          <b>Brooke Sansone</b> pada September 2024.
+        </p>
+
+        <div class="nav-buttons">
+          <a href="index.html" class="btn-link">← HOME PAGE</a>
+          <a href="UC_karir.html" class="btn-link">PERJALANAN KARIER →</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-1">© 2025 | PUTRI MALIKA | 251011700312</p>
+        <p class="small">01SIFP005 - Universitas Pamulang</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString("id-ID", { hour12: false });
+        document.getElementById("clock").innerHTML = "🕒 " + timeString;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          navbar.classList.add("navbar-hidden");
+        } else {
+          navbar.classList.remove("navbar-hidden");
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    </script>
+  </body>
+</html>

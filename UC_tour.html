@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Konser - Charlie Puth | FindArts</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #008ddf;
+        --bg-dark: #121213;
+        --content-navy: #1a2a3a;
+        --text-muted: #b0b0b0;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+      }
+
+      /* --- NAVBAR STYLE (Identik dengan Home) --- */
+      .navbar {
+        background-color: rgba(18, 18, 19, 0.9) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 1rem 0;
+        transition: top 0.4s ease-in-out;
+      }
+
+      .navbar-hidden {
+        top: -100px !important;
+      }
+
+      .navbar-brand {
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+      }
+
+      .nav-link {
+        font-size: 0.9rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 0 10px;
+        transition: 0.3s;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-color) !important;
+      }
+
+      #clock {
+        font-weight: 300;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 5px 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      #header {
+        max-width: 100%;
+        height: 250px;
+        background: linear-gradient(
+          to bottom,
+          rgba(18, 18, 19, 0),
+          var(--bg-dark)
+        );
+      }
+
+      /* --- CONTENT WRAPPER --- */
+      .content-wrapper {
+        max-width: 900px;
+        margin: -60px auto 80px auto;
+        background-color: var(--content-navy);
+        padding: 60px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+        z-index: 2;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.8rem;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      h3 {
+        font-family: "Playfair Display", serif;
+        color: var(--primary-color);
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 12px;
+        letter-spacing: 1px;
+      }
+
+      /* --- TOUR LIST STYLE --- */
+      .tour-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 45px;
+      }
+
+      .tour-list li {
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .tour-list li:hover {
+        padding-left: 15px;
+        color: var(--primary-color);
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+
+      .tour-year {
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      /* --- NAVIGATION LINKS --- */
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-link {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        text-transform: uppercase;
+      }
+
+      .btn-link:hover {
+        color: var(--primary-color);
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background: #0a0a0b;
+        padding: 50px 0;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          Find<span style="color: var(--primary-color)">Arts</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="UC_tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="UC_kontak.html">Kontak</a>
+            </li>
+          </ul>
+          <div id="clock" class="ms-lg-3 mt-2 mt-lg-0">🕒 00:00:00</div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="header"></div>
+
+    <!-- CONTENT -->
+    <div class="container">
+      <div class="content-wrapper">
+        <h1>Tour Konser</h1>
+
+        <section>
+          <h3>Menjadi Bintang Utama</h3>
+          <ul class="tour-list">
+            <li>
+              <span>Nine Track Mind Tour</span>
+              <span class="tour-year">2016</span>
+            </li>
+            <li>
+              <span>Don't Talk Tour</span> <span class="tour-year">2016</span>
+            </li>
+            <li>
+              <span>Voicenotes Tour</span> <span class="tour-year">2018</span>
+            </li>
+            <li>
+              <span>One Night Only Tour</span>
+              <span class="tour-year">2022</span>
+            </li>
+            <li>
+              <span>Charlie the Live Experience</span>
+              <span class="tour-year">2023</span>
+            </li>
+            <li>
+              <span>Charlie Puth Presents "Something New"</span>
+              <span class="tour-year">2024</span>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Supporting Act</h3>
+          <ul class="tour-list">
+            <li>
+              <span>Illuminate World Tour (Shawn Mendes)</span>
+              <span class="tour-year">2017</span>
+            </li>
+          </ul>
+        </section>
+
+        <div class="nav-links">
+          <a href="UC_award.html" class="btn-link">← NOMINASI & AWARDS</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-1">© 2025 | PUTRI MALIKA | 251011700312</p>
+        <p class="small">01SIFP005 - Universitas Pamulang</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString("en-GB");
+        document.getElementById("clock").innerHTML = `🕒 ${timeString}`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+
+      // Navbar Scroll Effect
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          navbar.classList.add("navbar-hidden");
+        } else {
+          navbar.classList.remove("navbar-hidden");
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    </script>
+  </body>
+</html>
